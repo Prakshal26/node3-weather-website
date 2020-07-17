@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather</title>
+
+    <!--This will add image in the browser tab-->
+    <link rel="icon" href ="img/weather.png">
+
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+<!--We have created header in templates/partials and registered the partialPath in app.js. So > sign
+means it has to look for some partial, it will go in that direcotry and will look for
+file called header.
+Header will be called. Importat is when header will be called it will pass the title and name
+property to header file.
+Index page has name and title property from app.js where we are giving app.get-->
+<div class="main-content">
+{{>header}}
+
+<p>Use this site to get weather</p>
+
+<!--From app.js when we used app.get request for home page we are passing the structure having title and name.-->
+<!--<h1>{{title}}</h1>
+<p>Created by {{name}}</p>
+-->
+
+<form>
+<input placeholder="location">
+<button>Search</button>
+</form>
+
+<p id ="message-1">
+
+</p>
+
+<p  id ="message-2">
+
+</p>
+
+
+</div>
+
+{{>footer}}
+
+<!-- Execute this client side js at last. It will carry all the tags with it i.e form input etc etc.-->
+ <script src="js/app.js"></script>
+</body>
+</html>

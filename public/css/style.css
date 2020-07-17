@@ -1,0 +1,69 @@
+/*
+Where ever we will include this css file, In that file where ever we will use body,footer etc tags, there
+all of it's changes will be applied.
+ */
+
+body {
+    color:#333333; /*-Hash code for Dark Gray*/
+    font-family: Arial;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0 16px;
+
+    display : flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+footer {
+    color:#888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding: 16px 0;
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+/*
+Inside header tag if there will be any a tag that will only be changed. It will not change the
+a tag which is not inside the header.
+Check header.hbs file
+ */
+header a {
+    color:#888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+/*
+We have created a class called portrait. So where we will mention this class there it's effect will take place.
+Like in about.hbs we have said < img class="portrait" src=etc etc>.
+
+ */
+.portrait  {
+    width: 250px ;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color:white;
+    padding: 8px;
+}
