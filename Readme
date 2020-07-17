@@ -1,0 +1,11 @@
+To run this project go to root directory.
+i.e /webs-erver and give 'npm run dev'.
+
+It is running using npm run dev as in package.json we have added two additionla tags.
+One is START: It is for heroku to look the path from where to start the application.
+Second is dev: in that we have given the nodemon command that we were using earlier. So
+we have created kind of alias and running the application using npm run dev.
+
+Note: If we will try to run using nodemon src/app.js we will see an error. It is because
+nodemon should be installed globally to run that command. But for dev nodemon should be present
+locally so we have installed it locally and created the alias.
