@@ -6,6 +6,12 @@ const geocode = require('./utils/geocode')
 
 const app = express()
 
+/*
+Port number on which we need to run application. If we deploy the app and usee heroku then it will
+have it's own port number. And if we run locally then we have provided port to be 8080.
+ */
+const port = process.env.PORT || 8080
+
 console.log(__dirname)
 console.log(__filename)
 
@@ -176,6 +182,6 @@ app.get('*',(req,res)=>{
 })
 
 
-app.listen(8080,()=>{
-    console.log('Server is Up on port 8080')
+app.listen(port,()=>{
+    console.log('Server is Up on port '+ port)
 })
